@@ -1,0 +1,20 @@
+# Large dataset file (regenerate from the original NQ source if needed)
+processed_data/nq/merged_fb.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Pipeline outputs
+updated_results/
+results/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
