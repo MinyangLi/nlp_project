@@ -44,8 +44,6 @@ For BGE-M3, the FS-BGE scripts try model paths in this order:
 
 Datasets are provided under `processed_data/{truthfulQA, sciq, simple_questions_wiki}/merged_fb.json`.
 
-> Note: `processed_data/nq/merged_fb.json` is excluded from the repository because it is large. Regenerate it from the official Natural Questions source and place it under `processed_data/nq/merged_fb.json` before running the NQ pipeline.
-
 ## 3. Generate Predictions and Correctness Scores
 
 Run the following steps for each dataset: `nq`, `truthfulQA`, `sciq`, `simple_questions_wiki`.
