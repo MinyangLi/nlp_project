@@ -58,6 +58,36 @@ METRIC_CONFIG = {
         "display_name": "Hybrid score",
         "slug": "hybrid",
     },
+    "bge_m3_colbert": {
+        "file_name": "embedding_metrics_bge_m3.json",
+        "json_key": "bge_m3_colbert",
+        "display_name": "BGE-M3 ColBERT",
+        "slug": "bge_m3_colbert",
+    },
+    "bge_token_reweighting": {
+        "file_name": "embedding_metrics_bge_m3_fact.json",
+        "json_key": "fact_weighted_colbert",
+        "display_name": "BGE-M3 w/ token reweighting",
+        "slug": "bge_token_reweighting",
+    },
+    "bge_fact_token": {
+        "file_name": "embedding_metrics_bge_m3_fact.json",
+        "json_key": "fact_sensitive_similarity",
+        "display_name": "BGE-M3 w/ fact-token penalty",
+        "slug": "bge_fact_token",
+    },
+    "bge_span_penalty": {
+        "file_name": "embedding_metrics_bge_m3_fact_span.json",
+        "json_key": "span_penalty_similarity",
+        "display_name": "BGE-M3 w/ span-level penalty",
+        "slug": "bge_span_penalty",
+    },
+    "fs_bge": {
+        "file_name": "embedding_metrics_bge_m3_fact_span.json",
+        "json_key": "fact_span_similarity",
+        "display_name": "FS-BGE",
+        "slug": "fs_bge",
+    },
 }
 
 
@@ -256,8 +286,8 @@ def parse_args():
         choices=list(METRIC_CONFIG.keys()),
         required=True,
         help=(
-            "Which score to plot: cos/entity/entailment/"
-            "entailment_true_only/entailment_square_sqrt/entailment_fbeta/hybrid"
+            "Which score to plot. Available options are listed in METRIC_CONFIG, "
+            "including cos, entailment_fbeta, bge_m3_colbert, bge_span_penalty, and fs_bge."
         ),
     )
     parser.add_argument(
